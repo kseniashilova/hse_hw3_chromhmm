@@ -6,5 +6,5 @@ DND41	H3k04me1AlnRep1	H3k04me1AlnRep1.bam	ControlStdAlnRep1.bam
 DND41	H3k04me2AlnRep1	H3k04me2AlnRep1.bam	ControlStdAlnRep1.bam
 DND41	H3k04me3AlnRep1	H3k04me3AlnRep1.bam	ControlStdAlnRep1.bam
 DND41	H3k79me2AlnRep1	H3k79me2AlnRep1.bam	ControlStdAlnRep1.bam
-DND41	CtcfAlnRep1	CtcfAlnRep1.bam	ControlStdAlnRep1.bam
-DND41	Ezh239875AlnRep1	Ezh239875AlnRep1.bam	ControlStdAlnRep1.bam
+DND41	H3k09me3AlnRep1	H3k09me3AlnRep1.bam	ControlStdAlnRep1.bam
+DND41	H4k20me1AlnRep1	H4k20me1AlnRep1.bam	ControlStdAlnRep1.bam
