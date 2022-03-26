@@ -13,8 +13,8 @@
 | H3k04me2   | H3k04me2AlnRep1.bam   | wgEncodeBroadHistoneDnd41H3k04me2AlnRep1.bam|
 | H3k04me3   | H3k04me3AlnRep1.bam   | wgEncodeBroadHistoneDnd41H3k04me3AlnRep1.bam|
 | H3k79me2   | H3k79me2AlnRep1.bam   | wgEncodeBroadHistoneDnd41H3k79me2AlnRep1.bam|
-| Ctcf   | CtcfAlnRep1.bam   |wgEncodeBroadHistoneDnd41CtcfAlnRep1.bam|
-| Ezh239875   | Ezh239875AlnRep1.bam   |wgEncodeBroadHistoneDnd41Ezh239875AlnRep1.bam|
+| Ctcf   | H3k09me3AlnRep1.bam   |wgEncodeBroadHistoneDnd41H3k09me3AlnRep1.bam|
+| Ezh239875   | H4k20me1AlnRep1.bam   |wgEncodeBroadHistoneDnd41H4k20me1AlnRep1.bam|
   
     
 Также хочется показать содержимое [cellmarkfiletable.txt файла](https://github.com/kseniashilova/hse_hw3_chromhmm/blob/main/cellmarkfiletable.txt), который нужен для запуска ChromHMM:  
