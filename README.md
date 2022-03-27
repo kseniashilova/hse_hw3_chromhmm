@@ -98,15 +98,15 @@
 # Аннотация состояний
 Приведу таблицу для сопоставления состояний и их аннотаций, основываясь на рассуждениях выше. В столбцах таблицы обозначим, доказывает ли источник предположение (ну или хотя бы не опровергает ли).    
 | State | Name| Histone modification |Tables ChromHmm | Visualisation GenomeBrowser | Article |
-|-------|-----|------------|-----------------------------|---------|
-|  1    | Repressed heterochromatin | - | proved |proved | proved |
+|-------|-----|------|------|-----------------------------|---------|
+|  1    | Repressed heterochromatin | no | proved |proved | proved |
 |  2    |  Repressed heterochromatin | H3k27me3 | proved |proved | proved |
 |  3    |  Repetitive | H3k9me3 | proved | not enough information | proved |
 |  4    |  Transcribed 5′ distal; exons | H3k36me3| proved| proved| proved, but there are a lot of approproate states for "4" (strong enhancer in transcribed regions, spliced exons) |
 |  5    |  Transcribed less 5′ proximal, med expr  |H3k36me3 | proved | proved | proved |
 |  6    |  Transcribed 5′ distal; exons  |H3k36me3, H3k20me1, H3k79me2 | proved| proved| proved, but there are a lot of approproate states for "6" (strong enhancer in transcribed regions, spliced exons) |
-|  7    | Transcribed 5′ proximal, higher expr |H3k20me1, H3k79me2| proved | proved | proved |
-|  8    | Transcribed promoter; highest expr |H3k36me3, H3k20me1, H3k79me2, H3k4me1, H3k27ac, H3k4me2, H3k4me3| proved | proved | proved |
+|  7    | Transcribed 5′ proximal, higher expr | H3k20me1, H3k79me2 | proved | proved | proved |
+|  8    | Transcribed promoter; highest expr | H3k36me3, H3k20me1, H3k79me2, H3k4me1, H3k27ac, H3k4me2, H3k4me3| proved | proved | proved |
 |  9    |  Promoter | H3k4me1, H3k27ac, H3k4me2, H2az| proved | proved | proved |
 |  10    |  Promoter | H3k20me1, H3k79me2, H3k4me1, H3k27ac, H3k4me2, H3k4me3, H2az| proved | proved | proved |    
 
