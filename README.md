@@ -25,7 +25,7 @@
   
   
 Команды я выполняла в гугл колабе: https://colab.research.google.com/drive/1GXZHi69iASv1INxorZbNLEpyn6G-YZgM?usp=sharing  
-Так же код можно посмотреть в [этом файле](https://colab.research.google.com/drive/1GXZHi69iASv1INxorZbNLEpyn6G-YZgM?usp=sharing).  
+Так же код можно посмотреть в [этом файле](https://github.com/kseniashilova/hse_hw3_chromhmm/blob/main/Shilova_Ksenia_ChromHmm.ipynb).  
   
 В задании сказано, что нужно привести список команд, поэтому дублирую их здесь:  
 Скачивание файлов:  
