@@ -100,7 +100,7 @@
 | State | Name| Histone modification |Tables ChromHmm | Visualisation GenomeBrowser | Article |
 |-------|-----|------|------|-----------------------------|---------|
 |  1    | Repressed heterochromatin | no | proved |proved | proved |
-|  2    |  Repressed heterochromatin | H3k27me3 | proved |proved | proved |
+|  2    |  Repressed heterochromatin | H3k27me3 | proved |proved | not enough information |
 |  3    |  Repetitive | H3k9me3 | proved | not enough information | proved |
 |  4    |  Transcribed 5′ distal; exons | H3k36me3| proved| proved| proved, but there are a lot of approproate states for "4" (strong enhancer in transcribed regions, spliced exons) |
 |  5    |  Transcribed less 5′ proximal, med expr  |H3k36me3 | proved | proved | proved |
