@@ -27,6 +27,28 @@
 Команды я выполняла в гугл колабе: https://colab.research.google.com/drive/1GXZHi69iASv1INxorZbNLEpyn6G-YZgM?usp=sharing  
 Так же код можно посмотреть в [этом файле](https://colab.research.google.com/drive/1GXZHi69iASv1INxorZbNLEpyn6G-YZgM?usp=sharing).  
   
+В задании сказано, что нужно привести список команд, поэтому дублирую их здесь:  
+Скачивание файлов:  
+```
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H2azAlnRep1.bam -O H2azAlnRep1.bam
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k27acAlnRep1.bam -O H3k27acAlnRep1.bam
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k27me3AlnRep1.bam -O H3k27me3AlnRep1.bam
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k36me3AlnRep1.bam -O H3k36me3AlnRep1.bam
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k04me1AlnRep1.bam -O H3k04me1AlnRep1.bam
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k04me2AlnRep1.bam -O H3k04me2AlnRep1.bam
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k04me3AlnRep1.bam -O H3k04me3AlnRep1.bam
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k79me2AlnRep1.bam -O H3k79me2AlnRep1.bam
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k09me3AlnRep1.bam -O H3k09me3AlnRep1.bam
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H4k20me1AlnRep1.bam -O H4k20me1AlnRep1.bam  
+! wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam -O ControlStdAlnRep1.bam
+```
+
+  
+Запуск ChromHmm:  
+```
+!java -mx5000M -jar /content/ChromHMM/ChromHMM.jar BinarizeBam -b 200  /content/ChromHMM/CHROMSIZES/hg19.txt /content/ cellmarkfiletable.txt   binarizedData  
+!java -mx1200M -jar /content/ChromHMM/ChromHMM.jar LearnModel binarizedData LearnModelOutput 10 hg19
+```
 # Анализ результатов
 ## Графики ChromHmm    
 Посмотрим на выдачу ChromHmm и попробуем сделать некоторые гипотезы о состояниях.  
@@ -89,3 +111,39 @@
 |  10    |  Promoter | proved | proved | proved |    
 
 # Бонусное задание
+Программным прособом преобразуем файл (команды также есть в ноутбуке Google colab):  
+```
+with open('/content/drive/MyDrive/LearnModelOutput/DND41_10_expanded.bed', 'r') as f:
+    nums = f.read().splitlines()
+    
+nums2 = nums[2:]
+
+newfile = []
+newfile.append(nums[0])
+newfile.append(nums[1]) # Первые две строки
+for i in range(len(nums2)):
+  a = nums2[i].split('\t') # состояние
+  if (a[3] == '1') or (a[3] == '2'):
+    a[3] = 'Repressed_heterochromatin'
+  elif (a[3] == '3'):
+    a[3] = 'Repetitive'
+  elif (a[3] == '4') or (a[3] == '6'):
+    a[3] = 'Transcribed_5_Distal'
+  elif (a[3] == '5'):
+    a[3] = 'Transcribed_less_5_proximal_med_expr' 
+  elif (a[3] == '7'):
+    a[3] = 'Transcribed_5_proximal_higher_expr' 
+  elif (a[3] == '8'):
+    a[3] = 'Transcribed_promoter_highest_expr' 
+  elif (a[3] == '9') or (a[3] == '10'):
+    a[3] = 'Promoter' 
+
+  newfile.append('\t'.join(a))
+  
+  np.savetxt('/content/drive/MyDrive/LearnModelOutput/NEW_DND41_10_expanded.bed', newfile, fmt="%s")
+ ```
+  
+    
+В итоге, если использовать файл [NEW_DND41_10_expanded.bed](https://github.com/kseniashilova/hse_hw3_chromhmm/blob/main/NEW_DND41_10_expanded.bed), получается следующий результат (как и требовалось в задании - удобная аннотация состояний):  
+![](https://github.com/kseniashilova/hse_hw3_chromhmm/blob/main/pic/bonus1.PNG)  
+![](https://github.com/kseniashilova/hse_hw3_chromhmm/blob/main/pic/bonus2.PNG)
