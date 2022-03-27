@@ -25,7 +25,7 @@
   
   
 Команды я выполняла в гугл колабе: https://colab.research.google.com/drive/1GXZHi69iASv1INxorZbNLEpyn6G-YZgM?usp=sharing  
-Так же код ожно посмотреть в [этом файле](https://colab.research.google.com/drive/1GXZHi69iASv1INxorZbNLEpyn6G-YZgM?usp=sharing).  
+Так же код можно посмотреть в [этом файле](https://colab.research.google.com/drive/1GXZHi69iASv1INxorZbNLEpyn6G-YZgM?usp=sharing).  
   
 # Анализ результатов
 ## Графики ChromHmm    
