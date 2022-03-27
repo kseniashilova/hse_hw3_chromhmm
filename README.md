@@ -24,6 +24,9 @@
 ![](https://github.com/kseniashilova/hse_hw3_chromhmm/blob/main/pic/picture_file.PNG)
   
   
+Команды я выполняла в гугл колабе: https://colab.research.google.com/drive/1GXZHi69iASv1INxorZbNLEpyn6G-YZgM?usp=sharing  
+Так же код ожно посмотреть в [этом файле](https://colab.research.google.com/drive/1GXZHi69iASv1INxorZbNLEpyn6G-YZgM?usp=sharing).  
+  
 # Анализ результатов
 ## Графики ChromHmm    
 Посмотрим на выдачу ChromHmm и попробуем сделать некоторые гипотезы о состояниях.  
@@ -82,4 +85,6 @@
 |  7    | Transcribed 5′ proximal, higher expr | proved | proved | proved |
 |  8    | Transcribed promoter; highest expr | proved | proved | proved |
 |  9    |  Promoter | proved | proved | proved |
-|  10    |  Promoter | proved | proved | proved |  
+|  10    |  Promoter | proved | proved | proved |    
+
+# Бонусное задание
